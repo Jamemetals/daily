@@ -11,7 +11,7 @@ from flask import Flask
 import dash_bootstrap_components as dbc
 from datetime import datetime,time
 import dash_auth
-server = Flask(__name__)
+#server = Flask(__name__)
 #Load dataset
 df = pd.read_csv(r"C:\Users\ASUS\Downloads\csq_matlab.csv")
 df['Time'] = pd.to_datetime(df['Time'])
@@ -113,6 +113,7 @@ def summary_day(df):
     return summary_day
 #Initiate the App
 app = dash.Dash(__name__,server = server,external_stylesheets=[dbc.themes.BOOTSTRAP,dbc.icons.BOOTSTRAP])
+server = app.server
 auth = dash_auth.BasicAuth(app, {'james':'jamemetals123'})
 #Build the components
 #Design app layout
