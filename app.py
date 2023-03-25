@@ -112,6 +112,7 @@ def summary_day(df):
     return summary_day
 #Initiate the App
 app = Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP,dbc.icons.BOOTSTRAP])
+app = app.server
 auth = dash_auth.BasicAuth(app, {'james':'jamemetals123'})
 #Build the components
 #Design app layout
