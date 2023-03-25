@@ -12,7 +12,7 @@ import dash_bootstrap_components as dbc
 from datetime import datetime,time
 import dash_auth
 #Load dataset
-df = pd.read_csv("https://github.com/Jamemetals/daily/blob/72c3606b3ed3f8176aae49b3ef360b565f62cd4e/csq_matlab.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/Jamemetals/daily/main/csq_matlab.csv?token=GHSAT0AAAAAACAITNMSGHFWRUOG4CUSR2C4ZA6TN7Q")
 df['Time'] = pd.to_datetime(df['Time'])
 df["Time"] = df["Time"] + pd.Timedelta(days = 76)
 
